@@ -2,11 +2,11 @@
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
 
 int main() {
+    // Delcaração da variável para o tipo de Comparação Cartas do Super Trunfo
+    int tipoComparacao;
+    
     // Declaração das variáveis para a primeira carta
     char estado1;
     char codigo1[5];
@@ -64,6 +64,10 @@ int main() {
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &pontos_turisticos2);
 
+    printf("Tipo de comparação entre as Cartas (1 para População, 2 para Área, 3 para PIB, 4 para Densidade Populacional, 5 para PIB per capita): ");
+    scanf("%d, &tipoComparacao");
+
+
     // Calculando a densidade populacional e PIB per capita para a segunda cidade
     desidadePopulacional2 = populacao2 / area2;
     pibPerCapita2 = pib2 * 1000000000 / populacao2; // PIB em reais, não bilhões
@@ -95,7 +99,7 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km²\n", desidadePopulacional2);
     printf("PIB per capita: %.2f reais\n", pibPerCapita2);
 
-// Comparação dos atributos
+    // Comparação das Cartas
     printf("\nComparação de Cartas:\n");
 
     // Comparação de População
@@ -118,6 +122,58 @@ int main() {
 
     // Comparação de Super Poder
     printf("Super Poder: Carta 1 venceu (%d)\n", superPoder1 > superPoder2);
+    
+    //---------------------------------------------------------------------------------------------------------------------------
+    
+    printf("Comparação de cartas (Atributo: ");
+    
+    // Exibe o nome do atributo a ser comparado
+    if (tipoComparacao == 1) {
+        printf("População):\n");
+    } else if (tipoComparacao == 2) {
+        printf("Área):\n");
+    } else if (tipoComparacao == 3) {
+        printf("PIB):\n");
+    } else if (tipoComparacao == 4) {
+        printf("Densidade Populacional):\n");
+    } else if (tipoComparacao == 5) {
+        printf("PIB per capita):\n");
+    } else {
+        printf("O número (%s) é inválido para comparação",);
+    }
+
+    // Realiza a comparação com base no atributo escolhido
+    if (tipoComparacao == 1) {  // Comparar população
+        if (populacao1 > populacao2) {
+            printf("Resultado: Carta 1 (%s) (%s) venceu!\n", estado1, cidade1);
+        } else {
+            printf("Resultado: Carta 2 (%s) (%s) venceu!\n", estado2, cidade2);
+        }
+    } else if (tipoComparacao == 2) {  // Comparar área
+        if (area1 > area2) {
+            printf("Resultado: Carta 1 (%s) (%s) venceu!\n", estado1, cidade1);
+        } else {
+            printf("Resultado: Carta 2 (%s) (%s) venceu!\n", estado2, cidade2);
+        }
+    } else if (tipoComparacao == 3) {  // Comparar PIB
+        if (pib1 > pib2) {
+            printf("Resultado: Carta 1 (%s) (%s) venceu!\n", estado1, cidade1);
+        } else {
+            printf("Resultado: Carta 2 (%s) (%s) venceu!\n", estado2, cidade2);
+        }
+    } else if (tipoComparacao == 4) {  // Comparar densidade populacional
+        if (densidadePopulacional1 < densidadePopulacional2) {
+            printf("Resultado: Carta 1 (%s) (%s) venceu!\n", estado1, cidade1);
+        } else {
+            printf("Resultado: Carta 2 (%s) (%s) venceu!\n", estado2, cidade2);
+        }
+    } else if (tipoComparacao == 5) {  // Comparar PIB per capita
+        if (pibPerCapita1 > pibPerCapita2) {
+            printf("Resultado: Carta 1 (%s) (%s) venceu!\n", estado1, cidade1);
+        } else {
+            printf("Resultado: Carta 2 (%s) (%s) venceu!\n", estado2, cidade2);
+        }
+    }
 
     return 0;
 }
