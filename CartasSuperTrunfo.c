@@ -8,14 +8,14 @@ int main() {
     int tipoComparacao;
     
     // Declaração das variáveis para a primeira carta
-    char estado1;
+    char estado1[2];
     char cidade1[50];
     int populacao1;
     float area1, pib1, pibPerCapita1, densidadePopulacional1, superPoder1;
     int pontos_turisticos1;
 
     // Declaração das variáveis para a segunda carta
-    char estado2;
+    char estado2[2];
     char cidade2[50];
     int populacao2;
     float area2, pib2, pibPerCapita2, densidadePopulacional2, superPoder2;
@@ -59,7 +59,7 @@ int main() {
     scanf("%d", &pontos_turisticos2);
 
     printf("Tipo de comparação entre as Cartas (1 para População, 2 para Área, 3 para PIB, 4 para Densidade Populacional, 5 para PIB per capita): ");
-    scanf("%d, &tipoComparacao");
+    scanf("%d", &tipoComparacao);
 
 
     // Calculando a densidade populacional e PIB per capita para a segunda cidade
@@ -71,7 +71,7 @@ int main() {
 
     // Exibição dos dados da primeira carta
     printf("\nCarta 1:\n");
-    printf("Estado: %c\n", estado1);
+    printf("Estado: %s\n", estado1);
     printf("Nome da Cidade: %s\n", cidade1);
     printf("População: %d\n", populacao1);
     printf("Área: %.2f km²\n", area1);
@@ -82,7 +82,7 @@ int main() {
 
     // Exibição dos dados da segunda carta
     printf("\nCarta 2:\n");
-    printf("Estado: %c\n", estado2);
+    printf("Estado: %s\n", estado2);
     printf("Nome da Cidade: %s\n", cidade2);
     printf("População: %d\n", populacao2);
     printf("Área: %.2f km²\n", area2);
@@ -131,7 +131,7 @@ int main() {
     } else if (tipoComparacao == 5) {
         printf("PIB per capita):\n");
     } else {
-        printf("O número (%s) é inválido para comparação", tipoComparacao);
+        printf("O número (%d) é inválido para comparação\n", tipoComparacao);
     }
 
     // Realiza a comparação com base no atributo escolhido
