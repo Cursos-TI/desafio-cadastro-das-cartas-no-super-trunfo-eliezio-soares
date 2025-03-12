@@ -111,7 +111,7 @@ int main() {
     printf("Pontos Turísticos: Carta 1 venceu (%d)\n", pontos_turisticos1 > pontos_turisticos2);
 
     // Comparação de Densidade Populacional
-    printf("Densidade Populacional: Carta 2 venceu (%d)\n", desidadePopulacional1 > desidadePopulacional2);
+    printf("Densidade Populacional: Carta 2 venceu (%d)\n", desidadePopulacional2 > desidadePopulacional1);
 
     // Comparação de PIB per Capita
     printf("PIB per Capita: Carta 1 venceu (%d)\n", pibPerCapita1 > pibPerCapita2);
