@@ -25,7 +25,7 @@ int main() {
 
     // Entrada dos dados da primeira carta
     printf("Digite os dados da Carta 1:\n");
-    printf("Estado (uma letra de A a H): ");
+    printf("Estado: ");
     scanf(" %c", &estado1);  // O espaço antes de %c ignora qualquer caractere de nova linha
     printf("Código da Carta (ex: A01): ");
     scanf("%s", codigo1);
@@ -46,7 +46,7 @@ int main() {
 
     // Entrada dos dados da segunda carta
     printf("\nDigite os dados da Carta 2:\n");
-    printf("Estado (uma letra de A a H): ");
+    printf("Estado: ");
     scanf(" %c", &estado2);  // O espaço antes de %c ignora qualquer caractere de nova linha
     printf("Código da Carta (ex: B02): ");
     scanf("%s", codigo2);
