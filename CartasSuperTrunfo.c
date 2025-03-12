@@ -20,7 +20,7 @@ int main() {
     char codigo2[5];
     char cidade2[50];
     int populacao2;
-    float area2, pib2, pibPerCapita2, desidadePopulacional2, superPoder1;
+    float area2, pib2, pibPerCapita2, desidadePopulacional2, superPoder2;
     int pontos_turisticos2;
 
     // Entrada dos dados da primeira carta
